@@ -2,13 +2,14 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-const sequelize = require('./database');
+const sequelize = require('./config/database');
 
 // Application port 
 const port = process.env.PORT;
 
 // Import routes
 const indexRouter = require('./routes/index');
+const userRoutes = require('./routes/user');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -20,6 +21,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Main route
 app.use('/', indexRouter);
+
+// User routes
+app.use('/api', userRoutes);
 
 
 
