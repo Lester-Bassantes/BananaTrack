@@ -1,0 +1,31 @@
+{
+  "name": "bananatrack",
+  "version": "1.0.0",
+  "description": "BananaTrack es un aplicativo web diseñado para la gestión eficiente de contenedores de banano.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch --env-file .env app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lester-Bassantes/BananaTrack.git"
+  },
+  "keywords": [
+    "banana",
+    "tracking",
+    "palmar"
+  ],
+  "author": "Lester Bassantes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lester-Bassantes/BananaTrack/issues"
+  },
+  "homepage": "https://github.com/Lester-Bassantes/BananaTrack#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "mysql2": "^3.11.4",
+    "sequelize": "^6.37.5"
+  }
+}
