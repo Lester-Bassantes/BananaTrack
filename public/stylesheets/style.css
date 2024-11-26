@@ -1,4 +1,13 @@
 /* Login */
-.section-background {
-    background-color: #455234;
+.form-container {
+    max-width: 750px;
+    width: 100%;
+    min-height: 500px;
+    box-sizing: border-box;
+}
+
+.image-container.move-left {
+    transform: translateX(-23.4375rem);
+    position: relative;
+    transition: transform 0.5s ease-in-out;
 }

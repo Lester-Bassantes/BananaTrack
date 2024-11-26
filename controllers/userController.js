@@ -20,10 +20,10 @@ const getAllUsers = async () => {
     }
 };
 
-const updateUser = async (id, data) => {
+const updateUser = async (user_id, data) => {
     try {
         const user = await User.update(data, {
-            where: { id },
+            where: { user_id },
         });
         return user;
     } catch (error) {
@@ -32,10 +32,10 @@ const updateUser = async (id, data) => {
     }
 };
 
-const deleteUser = async (id) => {
+const deleteUser = async (user_id) => {
     try {
         await User.destroy({
-            where: { id },
+            where: { user_id },
         });
         return true;
     } catch (error) {

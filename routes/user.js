@@ -1,6 +1,6 @@
 const express = require('express');
 const { createUser, getAllUsers, updateUser, deleteUser } = require('../controllers/userController');
-
+const User = require('../models/User');
 const router = express.Router();
 
 // Crear usuario
@@ -40,6 +40,23 @@ router.delete('/users/:id', async (req, res) => {
         res.status(204).end();
     } catch (error) {
         res.status(500).json({ message: error.message });
+    }
+});
+
+// Comprobar usuario
+router.post('/login', async (req, res) => {
+    const { txtNombreUsuario, txtContrasena } = req.body;
+    try {
+        let user = await User.findOne({ where: { user_username, user_password } });
+
+        if (!user) {
+            return res.redirect('login');
+        }
+
+        return res.redirect('main');
+
+    } catch (error) {
+        res.redirect('login');
     }
 });
 
