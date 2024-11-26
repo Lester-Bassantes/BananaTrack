@@ -5,7 +5,8 @@ const path = require('path');
 const sequelize = require('./database');
 
 // Application port 
-const port = process.env.PORT;
+let port = process.env.PORT || '3000';
+app.set('port', port);
 
 // Import routes
 const indexRouter = require('./routes/index');
