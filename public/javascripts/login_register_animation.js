@@ -1,8 +1,15 @@
 document.getElementById('btnNuevaCuenta').addEventListener('click', function () {
-    const imageContainer = document.getElementById('image-container');
-    const formRegisterContainer = document.getElementById('form-register-container');
+    console.log("hola");
+    const btnNuevaCuenta = document.getElementById("btnNuevaCuenta");
+    const imageContainer = document.getElementById("image-container");
+    const formRegisterContainer = document.getElementById("form-register-container");
 
-    // Alterna la clase 'move-left' para animar el movimiento
-    imageContainer.classList.toggle('move-left');
+    btnNuevaCuenta.addEventListener("click", () => {
+        // Desplazar la imagen hacia la izquierda
+        imageContainer.classList.add("move-left");
+
+        // Mostrar el formulario de registro
+        formRegisterContainer.classList.remove("d-none");
+    });
 
 });

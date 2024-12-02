@@ -18,7 +18,7 @@ const User = sequelize.define('User', {
     },
 }, {
     tableName: 'users', // Opcional, por defecto usa el nombre del modelo pluralizado
-    timestamps: false,  // Añade createdAt y updatedAt automáticamente
+    timestamps: true,  // Añade createdAt y updatedAt automáticamente
 });
 
 module.exports = User;
