@@ -29,7 +29,14 @@ Asegúrate de tener instalados los siguientes elementos antes de iniciar:
    ```bash
    cp .env.example .env
    ```
-4. **Ejecuta el servidor**  
+4. **Configura la base de datos MySQL**
+   - Crea una base de datos.
+   - Ajusta las credenciales de acceso en el archivo .env para conectar con tu base de datos.
+5. **Ejecuta las migraciones (si están disponibles)**
+   ```bash
+   npm run migrate
+   ```
+6. **Ejecuta el servidor**  
    ```bash
    npm run dev
    ```
