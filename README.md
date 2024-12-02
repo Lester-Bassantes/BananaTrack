@@ -10,6 +10,7 @@ Asegúrate de tener instalados los siguientes elementos antes de iniciar:
 
 - [Node.js](https://nodejs.org/) (versión 14 o superior recomendada)
 - [npm](https://www.npmjs.com/) (incluido con Node.js)
+- [MySQL](https://www.mysql.com/) (versión 8 o superior recomendada)
 
 ---
 
